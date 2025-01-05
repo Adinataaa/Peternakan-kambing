@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peternakan Kambing</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap" rel="stylesheet"/>
+
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">Peternakan <span>Kambing</span></a>
+      <div class="navbar-nav">
+        <a href="#home">Home</a>
+        <a href="#about">Tentang Kami</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Kontak</a>
+      </div>
+      <div class="navbar-ex">
+        <a href="#" id="search-button"><i data-feather="search"></i></a>
+        <a href="shopping-cart.html" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+      <div class="search-form">
+        <input type="search" id="search-input" placeholder="Search here..">
+        <button id="search-box"><i data-feather="search"></i></button>
+      </div>
+    </nav>
+
+    <section class="hero" id="home">
+      <main class="content">
+        <h1>Mari Melihat Peternakan <span>Kambing</span></h1>
+        <p>Kami menyediakan kambing sehat dan unggul untuk kebutuhan Anda</p>
+        <a href="#menu" class="cta">Beli Sekarang</a>
+      </main>
+    </section>
+
+    <section id="about" class="about">
+      <h2><span>Tentang</span> Kami</h2>
+      <div class="row">
+        <div class="about-img">
+          <img src="img/tentang-kami.jpg" alt="Tentang Kami">
+        </div>
+        <div class="content">
+          <h3>Kenapa memilih peternakan kami?</h3>
+          <p>Peternakan kami berfokus pada kepuasan pelanggan, memberikan pelayanan yang ramah dan profesional. Kami siap membantu Anda memilih kambing yang sesuai dengan kebutuhan Anda, baik itu untuk konsumsi, ternak, atau kegiatan lainnya.</p>
+          <p>Dengan layanan antar dan konsultasi, kami memastikan setiap pembelian kambing dari peternakan kami adalah pengalaman yang menyenangkan dan terpercaya.</p>
+          <p>Kami juga menjaga kualitas produk dengan memastikan kesehatan kambing melalui perawatan intensif dan pemberian pakan berkualitas. Hal ini menjadikan peternakan kami pilihan terbaik bagi Anda yang mengutamakan kualitas dan layanan unggulan.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="menu">
+      <h2><span>Menu</span> Kami</h2>
+      <p>Kami menyediakan berbagai produk unggulan dari peternakan kambing. Semua produk kami dipilih dengan teliti untuk memenuhi kebutuhan Anda.</p>
+      <div id="product-list">
+        <div class="row">
+          <div class="menu-card" data-name="susu" data-category="dairy">
+            <img src="img/menu/2.jpg" alt="kambing" class="menu-card-img">
+            <h3 class="menu-card-title">Susu Kambing</h3>
+            <p class="menu-card-price">Harga: Rp15.000</p>
+          </div>
+          <div class="menu-card" data-name="daging kambing" data-category="meat">
+            <img src="img/menu/3.jpg" alt="kambing" class="menu-card-img">
+            <h3 class="menu-card-title">Daging kambing</h3>
+            <p class="menu-card-price">Harga: Rp150.000/1kg</p>
+          </div>
+          <div class="menu-card">
+            <img src="img/menu/4.jpg" alt="kambing" class="menu-card-img">
+            <h3 class="menu-card-title">Bulu kambing</h3>
+            <p class="menu-card-price">Harga: Rp100.000</p>
+          </div>
+          <div class="menu-card">
+            <img src="img/menu/5.jpg" alt="kambing" class="menu-card-img">
+            <h3 class="menu-card-title">Pupuk kandang</h3>
+            <p class="menu-card-price">Harga: Rp1.000/1kg</p>
+          </div>
+          <div class="menu-card">
+            <img src="img/menu/6.jpg" alt="kambing" class="menu-card-img">
+            <h3 class="menu-card-title">Pakan kambing</h3>
+            <p class="menu-card-price">Harga: Rp50.000</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2><span>Kontak</span> Kami</h2>
+      <p>Hubungi kami melalui telepon di +62 812 3456 7890 atau email kami di peternakan@kambing.com. Anda juga bisa mengunjungi kami di alamat: Jalan Raya Kambing No. 123, Desa Sejahtera.</p>
+      <div class="row">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d837.1635131334981!2d98.40911332875422!3d3.531212554850721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sid!2sid!4v1735997126554!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+        <form action="">
+          <div class="input-group">
+            <i data-feather="user"></i>
+            <input type="text" placeholder="nama">
+          </div>
+          <div class="input-group">
+            <i data-feather="mail"></i>
+            <input type="text" placeholder="email">
+          </div>
+          <div class="input-group">
+            <i data-feather="phone"></i>
+            <input type="text" placeholder="nomor telepon">
+          </div>
+          <button type="submit" class="btn">kirim pesan</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="socials">
+        <a href="https://www.instagram.com/"><i data-feather="instagram"></i></a>
+        <a href="https://www.facebook.com/"><i data-feather="facebook"></i></a>
+        <a href="https://www.youtube.com/"><i data-feather="youtube"></i></a>
+      </div>
+      <div class="links">
+        <a href="#home">Home</a>
+        <a href="#about">Tentang Kami</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Kontak</a>
+      </div>
+      <div class="credit">
+        <p>Created by <span>adinata</span> | &copy; 2024</p>
+      </div>
+    </footer>
+    
+    <script>
+      feather.replace();
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
