@@ -25,49 +25,27 @@ document.addEventListener('click', function(e){
     }
 })
 
-// Cari produk berdasarkan kata kunci yang dimasukkan pengguna.
-// Cari produk berdasarkan kata kunci yang dimasukkan pengguna.
-document.getElementById("search-input").addEventListener("input", function () {
-    const query = document.getElementById("search-input").value.toLowerCase();
-    const products = document.querySelectorAll(".menu-card");
-
-    let hasResult = false;
-    products.forEach(product => {
-        const productName = product.getAttribute("data-name").toLowerCase();
-        if (productName.includes(query)) {
-            product.classList.remove("hidden");
-            hasResult = true;
-        } else {
-            product.classList.add("hidden");
-        }
+// Search
+document.getElementById("search-box").addEventListener("click", function () {
+    const searchInput = document
+      .getElementById("search-input")
+      .value.toLowerCase();
+    const elements = document.querySelectorAll("section, h3, p, div.menu-card");
+    let found = false;
+  
+    elements.forEach((element) => element.classList.remove("highlight"));
+  
+    elements.forEach((element) => {
+      if (
+        element.textContent.toLowerCase().includes(searchInput) &&
+        searchInput.trim() !== ""
+      ) {
+        found = true;
+        element.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
     });
-
-    // Scroll to menu section if there are results
-    if (hasResult) {
-        document.getElementById("menu").scrollIntoView({ behavior: "smooth" });
+  
+    if (!found) {
+      alert("Konten tidak ditemukan!");
     }
-});
-
-// Jika ingin pencarian dipicu oleh tombol pencarian
-document.querySelector("#search-button").addEventListener("click", function(e) {
-    const query = document.getElementById("search-input").value.toLowerCase();
-    const products = document.querySelectorAll(".menu-card");
-
-    let hasResult = false;
-    products.forEach(product => {
-        const productName = product.getAttribute("data-name").toLowerCase();
-        if (productName.includes(query)) {
-            product.classList.remove("hidden");
-            hasResult = true;
-        } else {
-            product.classList.add("hidden");
-        }
-    });
-
-    // Scroll to menu section if there are results
-    if (hasResult) {
-        document.getElementById("menu").scrollIntoView({ behavior: "smooth" });
-    }
-
-    e.preventDefault(); // Menghindari form submit jika tombol berada di dalam form
-});
+  });
