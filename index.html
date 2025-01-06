@@ -12,8 +12,10 @@
     <script src="https://unpkg.com/feather-icons"></script>
 
     <link rel="stylesheet" href="style.css" />
+    
   </head>
   <body>
+
     <nav class="navbar">
       <a href="#" class="navbar-logo">Peternakan <span>Kambing</span></a>
       <div class="navbar-nav">
@@ -61,7 +63,7 @@
       <p>Kami menyediakan berbagai produk unggulan dari peternakan kambing. Semua produk kami dipilih dengan teliti untuk memenuhi kebutuhan Anda.</p>
       <div id="product-list">
         <div class="row">
-          <div class="menu-card" data-name="susu" data-category="dairy">
+          <div class="menu-card" data-name="susu kambing" data-category="dairy">
             <img src="img/menu/2.jpg" alt="kambing" class="menu-card-img">
             <h3 class="menu-card-title">Susu Kambing</h3>
             <p class="menu-card-price">Harga: Rp15.000</p>
@@ -71,17 +73,17 @@
             <h3 class="menu-card-title">Daging kambing</h3>
             <p class="menu-card-price">Harga: Rp150.000/1kg</p>
           </div>
-          <div class="menu-card">
+          <div class="menu-card" data-name="bulu kambing" >
             <img src="img/menu/4.jpg" alt="kambing" class="menu-card-img">
             <h3 class="menu-card-title">Bulu kambing</h3>
             <p class="menu-card-price">Harga: Rp100.000</p>
           </div>
-          <div class="menu-card">
+          <div class="menu-card" data-name="pupuk kandang" >
             <img src="img/menu/5.jpg" alt="kambing" class="menu-card-img">
             <h3 class="menu-card-title">Pupuk kandang</h3>
             <p class="menu-card-price">Harga: Rp1.000/1kg</p>
           </div>
-          <div class="menu-card">
+          <div class="menu-card" data-name="pakan kambing">
             <img src="img/menu/6.jpg" alt="kambing" class="menu-card-img">
             <h3 class="menu-card-title">Pakan kambing</h3>
             <p class="menu-card-price">Harga: Rp50.000</p>
@@ -98,17 +100,20 @@
         <form action="">
           <div class="input-group">
             <i data-feather="user"></i>
-            <input type="text" placeholder="nama">
+            <input id="name" type="text" placeholder="nama">
           </div>
           <div class="input-group">
             <i data-feather="mail"></i>
-            <input type="text" placeholder="email">
+            <input id="email" type="email" placeholder="email">
           </div>
           <div class="input-group">
             <i data-feather="phone"></i>
-            <input type="text" placeholder="nomor telepon">
+            <input id="phone" type="number" placeholder="nomor telepon">
           </div>
-          <button type="submit" class="btn">kirim pesan</button>
+          <div class="text-area">
+            <textarea name="" id="message" placeholder="pesan anda"></textarea>
+          </div>
+          <button class="btn" onclick="sendToWhatsapp()">kirim pesan</button>
         </form>
       </div>
     </section>
@@ -134,5 +139,6 @@
       feather.replace();
     </script>
     <script src="script.js"></script>
+
   </body>
 </html>
