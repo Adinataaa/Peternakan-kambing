@@ -49,3 +49,26 @@ document.getElementById("search-box").addEventListener("click", function () {
       alert("Konten tidak ditemukan!");
     }
   });
+
+// kirim data kontak ke whatsapp
+function sendToWhatsapp(){
+    let number = "+6283847049959";
+
+    let name = document.getElementById('name').value;
+    let email = document.getElementById('email').value;
+    let phone = document.getElementById('phone').value;
+    let message = document.getElementById('message').value;
+
+    var url = "https://wa.me/" + number + "?text="
+    + "Name : " +name+ "%0a"
+    + "Email : " +email+ "%0a"
+    + "No telepon : " +phone+ "%0a"
+    + "Pesan anda : " +message+ "%0a%0a";
+
+    window.open(url, '_blank').focus();
+}
+
+// untuk tidak bisa mengklik kanan pada mouse saat di website / Menonaktifkan klik kanan 
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
